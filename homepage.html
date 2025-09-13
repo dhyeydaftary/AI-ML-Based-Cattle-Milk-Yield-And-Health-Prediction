@@ -1,0 +1,271 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dairy AI Dashboard</title>
+    <style>
+        body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        display: flex;
+        }
+
+        /* Navbar */
+        nav {
+        background: #2d6a4f;
+        color: white;
+        padding: 12px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        /* Logo */
+        .logo {
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+        }
+
+        /* Search bar */
+        .search-container {
+        flex: 1;
+        margin: 0 30px;
+        display: flex;
+        justify-content: center;
+        }
+
+        .search-box {
+        width: 60%;
+        max-width: 500px;
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 25px;
+        padding: 6px 15px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        }
+
+        .search-box input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 25px;
+        }
+
+        .search-box button {
+        background: #40916c;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        margin-left: 8px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+        background: #1b4332;
+        }
+
+        /* Auth buttons */
+        .auth-buttons {
+        display: flex;
+        gap: 12px;
+        }
+
+        .auth-buttons a {
+        text-decoration: none;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background 0.3s;
+        }
+
+        .login-btn {
+        background: white;
+        color: #2d6a4f;
+        }
+
+        .login-btn:hover {
+        background: #ddd;
+        }
+
+        .signup-btn {
+        background: #ffd166;
+        color: #2d6a4f;
+        }
+
+        .signup-btn:hover {
+        background: #ffb703;
+        color: white;
+        }
+
+        /* Sidebar */
+        .sidebar {
+        width: 250px;
+        height: 100vh;
+        background: #2d6a4f;
+        color: white;
+        padding: 20px;
+        position: fixed;
+        top: 60px; /* below navbar */
+        left: 0;
+        overflow-y: auto;
+        }
+
+        .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+        list-style: none;
+        padding: 0;
+        }
+
+        .sidebar ul li {
+        margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        padding: 10px;
+        border-radius: 6px;
+        transition: background 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+        background: #40916c;
+        }
+
+        /* Prediction Box */
+        .prediction {
+        margin-top: 20px;
+        background: #1b4332;
+        padding: 15px;
+        border-radius: 8px;
+        }
+
+        .prediction h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        }
+
+        .prediction p {
+        margin: 8px 0;
+        font-size: 14px;
+        }
+
+        /* Main content */
+        .content {
+        margin-left: 260px;
+        margin-top: 80px;
+        padding: 20px;
+        flex: 1;
+        }
+
+        .card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+        .search-container {
+            display: none;
+        }
+        .sidebar {
+            width: 200px;
+        }
+        .content {
+            margin-left: 210px;
+        }
+        .auth-buttons {
+            display: none;
+        }
+        }
+    </style>
+    </head>
+    <body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">🐄 Dairy AI</div>
+        <div class="search-container">
+        <form class="search-box" onsubmit="return googleSearch(event)">
+            <input type="text" id="query" placeholder="Search on Google...">
+            <button type="submit">Search</button>
+        </form>
+        </div>
+        <div class="auth-buttons">
+        <a href="#" class="login-btn">Login</a>
+        <a href="#" class="signup-btn">Sign Up</a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>📊 Menu</h2>
+        <ul>
+        <li><a href="#">🏠 Dashboard</a></li>
+        <li><a href="#">🐂 Cattle Data</a></li>
+        <li><a href="#">🥛 Milk Yield</a></li>
+        <li><a href="#">⚠️ Disease Alerts</a></li>
+        <li><a href="#">📑 Reports</a></li>
+        </ul>
+
+        <div class="prediction">
+        <h3>🔮 Predictions</h3>
+        <p><strong>Milk Yield:</strong> 18.5 L/day</p>
+        <p><strong>Disease Risk:</strong> Low (10%)</p>
+        <p><strong>Feed Efficiency:</strong> 85%</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="card">
+        <h2>Welcome to Dairy AI Dashboard</h2>
+        <p>Track milk yield, detect diseases early, and optimize feed usage with AI insights.</p>
+        </div>
+        <div class="card">
+        <h2>Live Milk Yield Graph</h2>
+        <p>[Graph/Chart will go here]</p>
+        </div>
+        <div class="card">
+        <h2>Health Monitoring</h2>
+        <p>[Disease detection stats will go here]</p>
+        </div>
+    </div>
+
+    <script>
+        function googleSearch(event) {
+        event.preventDefault();
+        const query = document.getElementById("query").value.trim();
+        if (query) {
+            window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, "_blank");
+        }
+        }
+    </script>
+
+    </body>
+    </html>
