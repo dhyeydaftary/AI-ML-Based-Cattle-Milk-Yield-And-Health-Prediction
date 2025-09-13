@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    color: black;
 }
 
 body{
@@ -13,15 +13,15 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #25252b;
+    background: #f9f9f9;
 }
 
 .container{
     position: relative;
     width: 750px;
     height: 450px;
-    border: 2px solid #e46033;
-    box-shadow: 0 0 25px #e46033;
+    border: 2px solid #056bb4;
+    box-shadow: 0 0 25px #056bb4;
     overflow: hidden;
 }
 
@@ -93,16 +93,16 @@ body{
     border: none;
     outline: none;
     font-size: 16px;
-    color: #fff;
+    color: black;
     font-weight: 600;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid black;
     padding-right: 23px;
     transition: .5s;
 }
 
 .input-box input:focus,
 .input-box input:valid{
-    border-bottom: 2px solid #e46033;
+    border-bottom: 2px solid #056bb4;
 }
 
 .input-box label{
@@ -111,14 +111,14 @@ body{
     left: 0;
     transform: translateY(-50%);
     font-size: 16px;
-    color: #fff;
+    color: black;
     transition: .5s;
 }
 
 .input-box input:focus ~ label,
 .input-box input:valid ~ label{
     top: -5px;
-    color: #e46033;
+    color: #056bb4;
 }
 
 .input-box box-icon{
@@ -127,12 +127,12 @@ body{
     right: 0;
     font-size: 18px;
     transform: translateY(-50%);
-    color: #fff;
+    color: black;
 }
 
 .input-box input:focus ~ box-icon,
 .input-box input:valid ~ box-icon{
-    color: #e46033;
+    color: #056bb4;
 }
 
 .btn{
@@ -144,7 +144,7 @@ body{
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    border: 2px solid #e46033;
+    border: 2px solid #056bb4;
     overflow: hidden;
     z-index: 1;    
 }
@@ -154,7 +154,7 @@ body{
     position: absolute;
     height: 300%;
     width: 100%;
-    background: linear-gradient(#25252b, #e46033, #25252b, #e46033);
+    background: linear-gradient(#f9f9f9, #0469b1, #f9f9f9, #056bb4);
     top: -100%;
     left: 0;
     z-index: -1;
@@ -173,7 +173,7 @@ body{
 
 .regi-link a{
     text-decoration: none;
-    color: #e46033;
+    color: #056bb4;
     font-weight: 600;
 }
 
@@ -251,7 +251,7 @@ body{
     top: -5px;
     height: 600px;
     width: 850px;
-    background: linear-gradient(45deg, #25252b, #e46033);
+    background: linear-gradient(45deg, #f9f9f9, #056bb4);
     /*transform: rotate(10deg) skewY(40deg);*/
     transform: rotate(10deg) skewY(40deg);
     transform-origin: bottom right;
@@ -270,8 +270,8 @@ body{
     top: 100%;
     height: 700px;
     width: 850px;
-    background: #25252b;
-    border-top: 3px solid #e46033;
+    background: #f9f9f9;
+    border-top: 3px solid #056bb4;
     transform: rotate(0deg) skewY(0deg);
     transform-origin: bottom left;
     transition: 1.5s ease;

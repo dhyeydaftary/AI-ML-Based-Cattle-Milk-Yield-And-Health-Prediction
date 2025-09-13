@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dairy AI Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      display: flex;
+    }
+
+    /* Navbar */
+    nav {
+      background: #2d6a4f;
+      color: white;
+      padding: 12px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .search-container {
+      flex: 1;
+      margin: 0 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-box {
+      width: 60%;
+      max-width: 500px;
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 25px;
+      padding: 6px 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 25px;
+    }
+
+    .search-box button {
+      background: #40916c;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      margin-left: 8px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .search-box button:hover {
+      background: #1b4332;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .auth-buttons a {
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .login-btn {
+      background: white;
+      color: #2d6a4f;
+    }
+
+    .login-btn:hover {
+      background: #ddd;
+    }
+
+    .signup-btn {
+      background: #ffd166;
+      color: #2d6a4f;
+    }
+
+    .signup-btn:hover {
+      background: #ffb703;
+      color: white;
+    }
+
+    /* Sidebar - Collapsed state */
+    .sidebar {
+      width: 70px;
+      height: 100vh;
+      background: #2d6a4f;
+      color: white;
+      padding: 20px 0;
+      position: fixed;
+      top: 60px;
+      left: 0;
+      overflow-x: hidden;
+      transition: width 0.5s ease;
+      z-index: 999;
+      box-shadow: 2px 0 6px rgba(0,0,0,0.2);
+    }
+
+    /* Sidebar - Expanded state */
+    .sidebar.expanded {
+      width: 250px;
+    }
+
+    .sidebar h2, .sidebar .prediction {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      margin: 0 20px;
+      margin-bottom: 20px;
+      white-space: nowrap;
+    }
+
+    .sidebar.expanded h2, .sidebar.expanded .prediction {
+      opacity: 1;
+      transition-delay: 0.2s;
+    }
+
+    .sidebar .prediction h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar .prediction p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border-radius: 0 6px 6px 0;
+      transition: background 0.3s;
+    }
+
+    .sidebar ul li a i {
+      font-size: 20px;
+      width: 30px;
+      text-align: center;
+    }
+
+    .sidebar ul li a span {
+      margin-left: 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateX(-20px);
+      white-space: nowrap;
+    }
+
+    .sidebar.expanded ul li a span {
+      opacity: 1;
+      transform: translateX(0);
+      transition-delay: 0.2s;
+    }
+
+    .sidebar ul li a:hover {
+      background: #40916c;
+    }
+
+    /* Main content */
+    .content {
+      margin-left: 90px;
+      margin-top: 80px;
+      padding: 20px;
+      transition: margin-left 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* center top card */
+      gap: 20px;
+    }
+    .content.shifted {
+      margin-left: 270px;
+    }
+
+    .top-card {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .bottom-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .search-container {
+        display: none;
+      }
+      .auth-buttons {
+        display: none;
+      }
+      .sidebar {
+        width: 50px;
+      }
+      .sidebar.expanded {
+        width: 200px;
+      }
+      .content {
+        margin-left: 70px;
+      }
+      .content.shifted {
+        margin-left: 220px;
+      }
+      .bottom-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🐄 Dairy AI</div>
+    <div class="search-container">
+      <form class="search-box" onsubmit="return googleSearch(event)">
+        <input type="text" id="query" placeholder="Search on Google...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="auth-buttons">
+      <a href="#" class="login-btn">Login</a>
+      <a href="#" class="signup-btn">Sign Up</a>
+    </div>
+  </nav>
+
+  <div class="sidebar" id="sidebar" onmouseenter="toggleNav()" onmouseleave="toggleNav()">
+    <h2>📊 Menu</h2>
+    <ul>
+      <li>
+        <a href="#">
+          🏠   
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          🐄
+          <span>Cattle Data</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          🍼
+          <span>Milk Yield</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          🌡️
+          <span>Disease Alerts</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          📄
+          <span>Reports</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="prediction">
+      <h3>🔮 Predictions</h3>
+      <p><strong>Milk Yield:</strong> 18.5 L/day</p>
+      <p><strong>Disease Risk:</strong> Low (10%)</p>
+      <p><strong>Feed Efficiency:</strong> 85%</p>
+    </div>
+  </div>
+
+  <div class="content" id="main-content">
+    <!-- Top center card -->
+    <div class="card top-card">
+      <h2>Welcome to Dairy AI Dashboard</h2>
+      <p>Track milk yield, detect diseases early, and optimize feed usage with AI insights.</p>
+    </div>
+
+    <!-- Bottom cards container -->
+    <div class="bottom-cards">
+      <div class="card">
+        <h2>Live Milk Yield Graph</h2>
+        <p>[Graph/Chart will go here]</p>
+      </div>
+      <div class="card">
+        <h2>Health Monitoring</h2>
+        <p>[Disease detection stats will go here]</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function googleSearch(event) {
+      event.preventDefault();
+      const query = document.getElementById("query").value.trim();
+      if (query) {
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, "_blank");
+      }
+    }
+
+    function toggleNav() {
+      const sidebar = document.getElementById("sidebar");
+      const content = document.getElementById("main-content");
+      sidebar.classList.toggle("expanded");
+      content.classList.toggle("shifted");
+    }
+  </script>
+
+</body>
+</html>
