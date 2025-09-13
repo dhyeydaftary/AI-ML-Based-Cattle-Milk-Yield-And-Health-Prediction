@@ -1,20 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Login &amp; Register Form</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
-</head>
-<body>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login & Signup Form</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 </head>
 <body>
     <div class="container">
@@ -76,7 +66,7 @@
                 </div>
 
                 <div class="regi-link animation" style="--li:21; --S:5">
-                    <p>Don't have an account? <br> <a href="#" class="SignInLink">Sign In</a></p>
+                    <p>Already have an account? <br> <a href="#" class="SignInLink">Log In</a></p>
                 </div>
             </form>
         </div>
@@ -88,12 +78,8 @@
 
     </div>
 
-    <script src="index.js"></script>
+    <script src="{{ url_for('static', filename='JS/script.js') }}"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-</body>
-</html>
-  <script  src="{{url_for('static', filename='script.js')}}"></script>
 
 </body>
 </html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dairy AI Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/dashboard.css') }}">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🐄 Dairy AI</div>
+    <div class="search-container">
+      <form class="search-box" onsubmit="return googleSearch(event)">
+        <input type="text" id="query" placeholder="Search on Google...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="auth-buttons">
+      <a href="/login" class="login-btn">Login</a>
+      <a href="/login" class="signup-btn">Sign Up</a>
+    </div>
+  </nav>
+
+  <div class="sidebar" id="sidebar" onmouseenter="toggleNav()" onmouseleave="toggleNav()">
+    <h2>📊 Menu</h2>
+    <ul>
+      <li><a href="#">🏠 <span>Dashboard</span></a></li>
+      <li><a href="#">🐄 <span>Cattle Data</span></a></li>
+      <li><a href="#">🍼 <span>Milk Yield</span></a></li>
+      <li><a href="#">🌡️ <span>Disease Alerts</span></a></li>
+      <li><a href="#">📄 <span>Reports</span></a></li>
+    </ul>
+
+    <div class="prediction">
+      <h3>🔮 Predictions</h3>
+      <p><strong>Milk Yield:</strong> 18.5 L/day</p>
+      <p><strong>Disease Risk:</strong> Low (10%)</p>
+      <p><strong>Feed Efficiency:</strong> 85%</p>
+    </div>
+  </div>
+
+  <div class="content" id="main-content">
+    <!-- Top hero card -->
+    <div class="card top-card">
+      <div class="text">
+        <h2>Welcome to Dairy AI Dashboard</h2>
+        <p>Track milk yield, detect diseases early, and optimize feed usage with AI insights.</p>
+        <ul>
+          <li>📈 Real-time monitoring of cattle performance</li>
+          <li>🍼 Accurate milk yield predictions</li>
+          <li>🌱 Smart feed recommendations</li>
+          <li>⚠️ Disease detection and alerts</li>
+        </ul>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2018/04/06/08/25/cow-3298869_1280.jpg" alt="Cow in field">
+    </div>
+
+    <!-- First row of cards -->
+    <div class="bottom-cards">
+      <div class="card">
+        <h2>Live Milk Yield Graph</h2>
+        <p>[Graph/Chart will go here]</p>
+      </div>
+      <div class="card">
+        <h2>Health Monitoring</h2>
+        <p>[Disease detection stats will go here]</p>
+      </div>
+    </div>
+
+    <!-- Second row of cards -->
+    <div class="bottom-cards">
+      <div class="card">
+        <h2>Add Your Cow Details</h2>
+        <p>Enter your cow’s age, breed, and health status to get personalized insights.</p>
+        <button>Add Cow</button>
+      </div>
+      <div class="card">
+        <h2>Recent Alerts</h2>
+        <p>Check the latest disease alerts and notifications for your cattle.</p>
+      </div>
+      <div class="card">
+        <h2>Feed Recommendations</h2>
+        <p>AI suggests the best feed plan to maximize milk yield and efficiency.</p>
+      </div>
+      <div class="card">
+        <h2>Cow Health Stats</h2>
+        <p>View detailed health metrics for each cow in your farm.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function googleSearch(event) {
+      event.preventDefault();
+      const query = document.getElementById("query").value.trim();
+      if (query) {
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, "_blank");
+      }
+    }
+
+    function toggleNav() {
+      const sidebar = document.getElementById("sidebar");
+      const content = document.getElementById("main-content");
+      sidebar.classList.toggle("expanded");
+      content.classList.toggle("shifted");
+    }
+  </script>
+
+</body>
+</html>
