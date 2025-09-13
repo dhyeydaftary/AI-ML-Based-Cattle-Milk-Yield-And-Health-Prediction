@@ -1,0 +1,151 @@
+cattle_id,cattle_name,user_id,breed,age,weight,lactation_stage,parity,created_at
+1,Lakshmi,8,Deoni,19,341,peak lactation,negative,2022-03-27 14:15:20
+2,Saraswati,22,Deoni,13,322,mid lactation,even,2022-01-15 08:30:45
+3,Chandra,9,Ongole,13,306,late lactation,even,2022-01-15 08:30:45
+4,Lakshmi,25,Ongole,2,363,dry period,composite,2022-05-10 18:45:10
+5,Ganesh,5,Deoni,5,308,late lactation,even,2022-07-03 09:55:30
+6,Ganga,18,Hariana,7,302,peak lactation,negative,2022-03-27 14:15:20
+7,Surya,24,Tharparkar,13,365,early lactation,negative,2022-03-27 14:15:20
+8,Lakshmi,28,Hariana,18,358,late lactation,negative,2022-05-10 18:45:10
+9,Vishnu,27,Ongole,12,350,early lactation,prime,2022-03-27 14:15:20
+10,Chandra,28,Tharparkar,2,335,peak lactation,prime,2022-03-27 14:15:20
+11,Parvati,26,Krishna Valley,10,321,dry period,odd,2022-03-27 14:15:20
+12,Ganesh,27,Deoni,15,369,early lactation,prime,2022-07-03 09:55:30
+13,Ganga,14,Krishna Valley,11,321,mid lactation,composite,2022-05-10 18:45:10
+14,Saraswati,15,Deoni,2,312,dry period,positive,2022-05-10 18:45:10
+15,Vishnu,9,Krishna Valley,16,346,peak lactation,composite,2022-03-27 14:15:20
+16,Parvati,30,Kankrej,4,366,late lactation,even,2022-05-10 18:45:10
+17,Ganesh,2,Deoni,15,346,peak lactation,odd,2022-09-22 22:10:05
+18,Saraswati,14,Ongole,14,371,peak lactation,positive,2022-03-27 14:15:20
+19,Chandra,29,Krishna Valley,14,349,early lactation,negative,2022-09-22 22:10:05
+20,Chandra,2,Hariana,11,368,mid lactation,odd,2022-07-03 09:55:30
+21,Surya,12,Deoni,20,313,early lactation,positive,2022-01-15 08:30:45
+22,Chandra,28,Tharparkar,4,345,late lactation,prime,2022-01-15 08:30:45
+23,Parvati,22,Hariana,10,336,late lactation,odd,2022-09-22 22:10:05
+24,Saraswati,22,Ongole,8,375,early lactation,positive,2022-01-15 08:30:45
+25,Ganga,27,Krishna Valley,5,375,peak lactation,even,2022-07-03 09:55:30
+26,Lakshmi,7,Deoni,19,339,late lactation,negative,2022-09-22 22:10:05
+27,Surya,18,Deoni,10,377,late lactation,negative,2022-09-22 22:10:05
+28,Yamuna,24,Ongole,18,350,dry period,prime,2022-07-03 09:55:30
+29,Surya,11,Hariana,5,331,mid lactation,prime,2022-09-22 22:10:05
+30,Saraswati,19,Deoni,14,373,peak lactation,odd,2022-05-10 18:45:10
+31,Ganesh,6,Ongole,13,380,early lactation,prime,2022-09-22 22:10:05
+32,Parvati,18,Tharparkar,9,327,dry period,composite,2022-01-15 08:30:45
+33,Ganga,10,Kankrej,7,341,dry period,even,2022-07-03 09:55:30
+34,Krishna,22,Deoni,1,312,mid lactation,prime,2022-07-03 09:55:30
+35,Lakshmi,12,Krishna Valley,6,343,early lactation,negative,2022-03-27 14:15:20
+36,Surya,4,Kankrej,12,364,dry period,composite,2022-09-22 22:10:05
+37,Vishnu,7,Hariana,9,328,dry period,odd,2022-05-10 18:45:10
+38,Ganesh,13,Tharparkar,5,364,mid lactation,even,2022-03-27 14:15:20
+39,Saraswati,10,Hariana,9,350,dry period,even,2022-05-10 18:45:10
+40,Surya,10,Tharparkar,6,307,early lactation,negative,2022-03-27 14:15:20
+41,Ganesh,22,Ongole,4,336,mid lactation,negative,2022-07-03 09:55:30
+42,Parvati,19,Krishna Valley,4,350,dry period,negative,2022-01-15 08:30:45
+43,Chandra,21,Tharparkar,18,372,late lactation,positive,2022-01-15 08:30:45
+44,Vishnu,18,Kankrej,15,317,dry period,positive,2022-09-22 22:10:05
+45,Yamuna,28,Ongole,19,363,early lactation,odd,2022-03-27 14:15:20
+46,Surya,24,Hariana,7,354,mid lactation,positive,2022-01-15 08:30:45
+47,Surya,10,Tharparkar,11,373,dry period,composite,2022-03-27 14:15:20
+48,Ganga,28,Krishna Valley,11,376,dry period,composite,2022-01-15 08:30:45
+49,Ganesh,1,Ongole,16,306,dry period,composite,2022-01-15 08:30:45
+50,Krishna,23,Ongole,4,365,mid lactation,positive,2022-07-03 09:55:30
+51,Parvati,23,Krishna Valley,3,376,peak lactation,positive,2022-05-10 18:45:10
+52,Lakshmi,5,Tharparkar,2,317,peak lactation,odd,2022-05-10 18:45:10
+53,Ganesh,17,Hariana,11,353,early lactation,negative,2022-09-22 22:10:05
+54,Krishna,8,Deoni,11,363,dry period,negative,2022-03-27 14:15:20
+55,Ganga,21,Deoni,7,350,early lactation,positive,2022-05-10 18:45:10
+56,Saraswati,26,Hariana,8,342,early lactation,negative,2022-07-03 09:55:30
+57,Vishnu,7,Tharparkar,7,342,late lactation,positive,2022-07-03 09:55:30
+58,Saraswati,9,Tharparkar,4,300,peak lactation,odd,2022-07-03 09:55:30
+59,Ganga,12,Tharparkar,8,332,late lactation,prime,2022-05-10 18:45:10
+60,Surya,7,Ongole,10,311,dry period,even,2022-09-22 22:10:05
+61,Saraswati,17,Krishna Valley,16,368,peak lactation,even,2022-05-10 18:45:10
+62,Krishna,6,Deoni,15,367,dry period,positive,2022-05-10 18:45:10
+63,Parvati,21,Ongole,8,323,late lactation,positive,2022-07-03 09:55:30
+64,Parvati,26,Hariana,10,360,peak lactation,negative,2022-07-03 09:55:30
+65,Ganesh,18,Kankrej,9,376,dry period,negative,2022-05-10 18:45:10
+66,Krishna,8,Tharparkar,7,342,mid lactation,negative,2022-09-22 22:10:05
+67,Chandra,5,Hariana,17,348,dry period,composite,2022-01-15 08:30:45
+68,Lakshmi,23,Ongole,11,320,dry period,positive,2022-01-15 08:30:45
+69,Chandra,3,Deoni,3,308,late lactation,positive,2022-03-27 14:15:20
+70,Lakshmi,26,Tharparkar,5,363,peak lactation,prime,2022-09-22 22:10:05
+71,Chandra,2,Ongole,2,330,early lactation,positive,2022-05-10 18:45:10
+72,Lakshmi,7,Deoni,9,348,peak lactation,odd,2022-01-15 08:30:45
+73,Yamuna,16,Ongole,5,338,dry period,prime,2022-07-03 09:55:30
+74,Vishnu,9,Tharparkar,5,378,dry period,odd,2022-07-03 09:55:30
+75,Chandra,9,Krishna Valley,2,300,dry period,negative,2022-09-22 22:10:05
+76,Yamuna,14,Ongole,16,329,dry period,even,2022-03-27 14:15:20
+77,Parvati,7,Deoni,9,322,dry period,negative,2022-07-03 09:55:30
+78,Krishna,10,Deoni,19,337,early lactation,prime,2022-09-22 22:10:05
+79,Surya,18,Tharparkar,5,373,dry period,even,2022-07-03 09:55:30
+80,Lakshmi,7,Krishna Valley,4,311,early lactation,negative,2022-03-27 14:15:20
+81,Saraswati,25,Hariana,18,326,early lactation,composite,2022-03-27 14:15:20
+82,Surya,20,Kankrej,11,372,peak lactation,negative,2022-03-27 14:15:20
+83,Krishna,18,Deoni,14,321,dry period,composite,2022-07-03 09:55:30
+84,Parvati,1,Deoni,6,314,early lactation,negative,2022-09-22 22:10:05
+85,Saraswati,15,Krishna Valley,7,316,late lactation,positive,2022-05-10 18:45:10
+86,Chandra,23,Tharparkar,3,331,dry period,negative,2022-03-27 14:15:20
+87,Chandra,7,Hariana,9,323,early lactation,negative,2022-01-15 08:30:45
+88,Ganesh,3,Deoni,1,359,peak lactation,negative,2022-03-27 14:15:20
+89,Chandra,16,Deoni,17,345,peak lactation,odd,2022-01-15 08:30:45
+90,Krishna,22,Hariana,17,340,peak lactation,composite,2022-05-10 18:45:10
+91,Yamuna,5,Krishna Valley,11,336,early lactation,prime,2022-07-03 09:55:30
+92,Vishnu,6,Ongole,13,328,dry period,prime,2022-05-10 18:45:10
+93,Saraswati,29,Deoni,11,350,dry period,prime,2022-01-15 08:30:45
+94,Ganesh,20,Hariana,15,339,late lactation,prime,2022-01-15 08:30:45
+95,Surya,13,Hariana,18,347,early lactation,prime,2022-07-03 09:55:30
+96,Lakshmi,29,Hariana,8,304,dry period,negative,2022-09-22 22:10:05
+97,Ganga,19,Kankrej,20,324,dry period,composite,2022-03-27 14:15:20
+98,Lakshmi,26,Deoni,16,335,peak lactation,prime,2022-03-27 14:15:20
+99,Saraswati,10,Krishna Valley,7,319,early lactation,odd,2022-05-10 18:45:10
+100,Parvati,7,Hariana,5,317,peak lactation,composite,2022-09-22 22:10:05
+101,Saraswati,29,Krishna Valley,10,355,late lactation,odd,2022-01-15 08:30:45
+102,Parvati,22,Deoni,13,340,peak lactation,positive,2022-03-27 14:15:20
+103,Surya,29,Hariana,16,351,mid lactation,prime,2022-09-22 22:10:05
+104,Parvati,14,Ongole,4,334,peak lactation,even,2022-07-03 09:55:30
+105,Krishna,23,Kankrej,18,340,early lactation,positive,2022-03-27 14:15:20
+106,Chandra,1,Tharparkar,20,308,dry period,prime,2022-01-15 08:30:45
+107,Saraswati,29,Tharparkar,11,325,dry period,prime,2022-09-22 22:10:05
+108,Lakshmi,21,Ongole,13,306,mid lactation,negative,2022-05-10 18:45:10
+109,Krishna,20,Krishna Valley,14,339,mid lactation,prime,2022-05-10 18:45:10
+110,Vishnu,14,Kankrej,6,338,mid lactation,negative,2022-05-10 18:45:10
+111,Vishnu,29,Kankrej,7,309,peak lactation,prime,2022-05-10 18:45:10
+112,Parvati,21,Kankrej,1,322,mid lactation,odd,2022-09-22 22:10:05
+113,Lakshmi,12,Tharparkar,1,327,mid lactation,composite,2022-09-22 22:10:05
+114,Krishna,19,Hariana,17,340,late lactation,negative,2022-01-15 08:30:45
+115,Krishna,18,Kankrej,14,367,mid lactation,composite,2022-05-10 18:45:10
+116,Lakshmi,6,Kankrej,7,320,early lactation,composite,2022-07-03 09:55:30
+117,Surya,29,Deoni,18,309,dry period,positive,2022-03-27 14:15:20
+118,Ganga,27,Kankrej,20,300,peak lactation,prime,2022-03-27 14:15:20
+119,Chandra,30,Tharparkar,19,305,peak lactation,composite,2022-01-15 08:30:45
+120,Saraswati,16,Ongole,9,318,early lactation,negative,2022-09-22 22:10:05
+121,Vishnu,17,Ongole,17,353,early lactation,positive,2022-01-15 08:30:45
+122,Surya,3,Hariana,11,318,late lactation,prime,2022-01-15 08:30:45
+123,Chandra,4,Ongole,5,303,dry period,composite,2022-07-03 09:55:30
+124,Vishnu,11,Tharparkar,10,324,late lactation,even,2022-07-03 09:55:30
+125,Krishna,17,Deoni,15,367,dry period,even,2022-09-22 22:10:05
+126,Lakshmi,23,Krishna Valley,14,305,peak lactation,prime,2022-03-27 14:15:20
+127,Parvati,22,Tharparkar,6,307,peak lactation,negative,2022-07-03 09:55:30
+128,Yamuna,20,Deoni,5,330,late lactation,prime,2022-07-03 09:55:30
+129,Vishnu,8,Kankrej,4,341,early lactation,negative,2022-01-15 08:30:45
+130,Saraswati,25,Krishna Valley,15,367,mid lactation,prime,2022-01-15 08:30:45
+131,Vishnu,14,Deoni,5,368,mid lactation,composite,2022-03-27 14:15:20
+132,Vishnu,26,Kankrej,2,325,peak lactation,prime,2022-05-10 18:45:10
+133,Krishna,22,Krishna Valley,14,354,mid lactation,negative,2022-09-22 22:10:05
+134,Surya,4,Tharparkar,15,368,late lactation,negative,2022-03-27 14:15:20
+135,Vishnu,12,Deoni,20,338,peak lactation,even,2022-09-22 22:10:05
+136,Parvati,13,Ongole,4,356,mid lactation,composite,2022-03-27 14:15:20
+137,Parvati,17,Hariana,15,322,early lactation,positive,2022-07-03 09:55:30
+138,Parvati,11,Deoni,9,345,early lactation,prime,2022-01-15 08:30:45
+139,Yamuna,14,Ongole,18,380,dry period,negative,2022-07-03 09:55:30
+140,Ganesh,8,Deoni,9,368,peak lactation,odd,2022-01-15 08:30:45
+141,Lakshmi,10,Krishna Valley,10,366,peak lactation,negative,2022-03-27 14:15:20
+142,Ganga,17,Krishna Valley,11,342,early lactation,positive,2022-09-22 22:10:05
+143,Lakshmi,4,Tharparkar,12,364,peak lactation,negative,2022-03-27 14:15:20
+144,Saraswati,26,Hariana,17,346,late lactation,positive,2022-05-10 18:45:10
+145,Parvati,5,Ongole,14,343,late lactation,even,2022-03-27 14:15:20
+146,Chandra,26,Kankrej,14,320,peak lactation,prime,2022-03-27 14:15:20
+147,Chandra,26,Tharparkar,17,365,late lactation,even,2022-03-27 14:15:20
+148,Chandra,18,Hariana,17,340,late lactation,even,2022-01-15 08:30:45
+149,Surya,15,Kankrej,4,346,early lactation,even,2022-01-15 08:30:45
+150,Krishna,21,Ongole,5,316,dry period,positive,2022-07-03 09:55:30
