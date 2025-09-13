@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS User (
 cur.execute("""
 CREATE TABLE IF NOT EXISTS Cattle_Info (
     cattle_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    cattle_name TEXT NOT NULL,
     user_id INTEGER NOT NULL,
     breed TEXT NOT NULL,
     age INTEGER,
